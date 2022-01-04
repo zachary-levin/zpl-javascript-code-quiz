@@ -1,1 +1,1 @@
-# zpl-javascript-code-quiz
+# zpl-javascript-code-quiz-1
