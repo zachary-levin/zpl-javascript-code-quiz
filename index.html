@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,48 +23,49 @@
             </div>
             <div class="score">
                 <p class="prefix">Score:</p>
-                <h1 class="score">0</h1>
+                <h1 id="score" class="score">0</h1>
             </div>
         </div>
         <div class="question-holder row">
             <div class="col-12">
-                <h1 id="questions">What is the answer to this question?</h1>
+                <h1 id="question">What is the answer to this question?</h1>
             </div>
         </div>
 
-
-        <div class="row">
-            <div class="col-12">
-                <div class="answer-container card">
-                    <p class="answer-prefix">A</p>
-                    <p class="answer-text" data-answer="a">Answer A</p>
+        <div id="answer-container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="answer-card card">
+                        <p class="answer-prefix">A</p>
+                        <p class="answer-text answers" data-answer="a">Answer A</p>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="row">
-            <div class="col-12">
-                <div class="answer-container card">
-                    <p class="answer-prefix">B</p>
-                    <p class="answer-text" data-answer="b">Answer B</p>
+            <div class="row">
+                <div class="col-12">
+                    <div class="answer-card card">
+                        <p class="answer-prefix">B</p>
+                        <p class="answer-text answers" data-answer="b">Answer B</p>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="row">
-            <div class="col-12">
-                <div class="answer-container card">
-                    <p class="answer-prefix">C</p>
-                    <p class="answer-text" data-answer="c">Answer C</p>
+            <div class="row">
+                <div class="col-12">
+                    <div class="answer-card card">
+                        <p class="answer-prefix">C</p>
+                        <p class="answer-text answers" data-answer="c">Answer C</p>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="row">
-            <div class="col-12">
-                <div class="answer-container card">
-                    <p class="answer-prefix">D</p>
-                    <p class="answer-text" data-answer="d">Answer D</p>
+            <div class="row">
+                <div class="col-12">
+                    <div class="answer-card card">
+                        <p class="answer-prefix">D</p>
+                        <p class="answer-text answers" data-answer="d">Answer D</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -73,4 +75,5 @@
     <!--JavaScript file-->
     <script src="./assets/js/script.js"></script>
 </body>
+
 </html>

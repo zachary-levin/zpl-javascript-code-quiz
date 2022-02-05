@@ -3,78 +3,109 @@ var questions = [
     {
         id: 1,
         question: "What is the file format for JavaScript files?",
-        
+    
         //MAY HAVE TO CHANGE ANSWERS FROM AN ARRAY TO "a: '.script', b:'.java', c: '.js', and 'd: .javascript'"
-        
-        possibleAnswers: [".script", ".java", ".js", ".javascript"],
-        correctAnswer: ".js"
+        a: ".script",
+        b: ".java",
+        c: ".js",
+        d: ".javascript",
+        //possibleAnswers: [".script", ".java", ".js", ".javascript"],
+        answer: "a"
     },
     // Question 2
     {
         id: 2,
         question: "What can you place in an array?",
-        possibleAnswers: ["Only strings", "Only integers", "Only strings and integers", "Anything"],
-        correctAnswer: "Anything"
+        a: "Only strings",
+        b: "Only integers",
+        c: "Only strings and integers", 
+        d: "Anything",
+        answer: "d"
     },
     // Question 3
     {
         id: 3,
         question: "What tag do you use to link a JavaScript file in an HTML document?",
-        possibleAnswers: ["<script>", "<link>"],
-        correctAnswer: "<script>"
+        a: "<script>", 
+        b: "<link>",
+        c: "<js>",
+        d: "<html>",
+        answer: "a"
     },
     // Question 4
     // ADD REAL QUESTION
     {
         id: 4,
         question: "What is the third choice in this question?",
-        possibleAnswers: ["a", "b", "c"],
-        correctAnswer: "c"
+        a: "First choice",
+        b: "Second choice", 
+        c: "Third choice", 
+        d: "Fourth choice",
+        answer: "c"
     },
     // Question 5
     // ADD REAL QUESTION
     {
         id: 5,
         question: "What is the fourth choice in this question?",
-        possibleAnswers: ["a", "b", "c", "d"],
-        correctAnswer: "d"
+        a: "Choice 1",
+        b: "Choice 2",
+        c: "Choice 3",
+        d: "Choice 4",
+        answer: "d"
     },
     // Question 6
     {
         id: 6,
         question: "How do you add the equivalent of 'OR' to a loop?",
-        possibleAnswers: ["OR", "||", "or", "&&"],
-        correctAnswer: "||"
+        a: "OR", 
+        b: "||", 
+        c: "or", 
+        d: "&&",
+        answer: "b"
     },
     // Question 7 
     {
         id: 7,
         question: "What does break do in a function?",
-        possibleAnswers: ["Stops the function from working", "Exits the function", "Breaks the entire program"],
-        correctAnswer: "Exits the function"
+        a: "Stops the function from working", 
+        b: "Exits the function", 
+        c: "Breaks the entire program",
+        d: "Breaks the rest of the program",
+        answer: "b"
     },
     // Question 8
     // ADD REAL QUESTION
     {
         id: 8,
         question: "Name a yellow fruit.",
-        possibleAnswers: ["Banana", "Apple", "Lime", "Orange"],
-        correctAnswer: "Banana"
+        a: "Banana", 
+        b: "Apple", 
+        c: "Lime", 
+        d: "Orange",
+        answer: "a"
     },
     // Question 9
     {
         id: 9,
         question: "How do you format a variable in JavaScript?",
-        possibleAnswers: ["UPPERCASE", "lowercase", "camelCase", "snake_case"],
-        correctAnswer: "camelCase" 
+        a: "UPPERCASE", 
+        b: "lowercase", 
+        c: "camelCase", 
+        d: "snake_case",
+        answer: "c" 
     },
     // Question 10
     {
         id: 10,
         question: "Which of these is NOT a type of loop?",
-        possibleAnswers: ["for loop", "while", "if else"],
-        correctAnswer: "if else"
+        a: "for loop", 
+        b:"while", 
+        c: "if else", 
+        d: "do-while",
+        answer: "c"
     }
+    
 ];
 
 const question = document.getElementById("question");
@@ -114,6 +145,7 @@ const getRandomQuestions = (arr, n) => {
 const getNewQuestion = () => {
     if (availableQuestions.length === 0) {
         alert("End of the game");
+        alert("You scored " + score + " points!")
         return;
     }
 
@@ -121,7 +153,7 @@ const getNewQuestion = () => {
     questionCounterText.innerText = `${questionCounter}/${MAX_QUESTIONS}`;
 
     currentQuestion = availableQuestions[0];
-    console.log(currentQuestion);
+    console.log("current question --> ", currentQuestion.question);
     question.innerText = currentQuestion.question;
     
     answers.forEach((answer) => {
@@ -133,13 +165,14 @@ const getNewQuestion = () => {
     answers.forEach((answer) => {
         answer.addEventListener("click", (e) => {
             if(!acceptingAnswers){
-                console.log("not accepting");
+                //console.log("not accepting");
                 return;
             }
             acceptingAnswers = false;
             const clickedAnswer = e.target;
             const answeredLetter = clickedAnswer.dataset["answer"]
 
+            
             let classToApply = "incorrect";
 
 
@@ -147,6 +180,12 @@ const getNewQuestion = () => {
                 score++;
                 scoreText.innerText = score;
                 classToApply = "correct";
+                console.log("correct!")
+            } else {
+                score--;
+                scoreText.innerText = score;
+                classToApply = "incorrect";
+                console.log("incorrect")
             }
 
             clickedAnswer.parentElement.classList.add(classToApply);

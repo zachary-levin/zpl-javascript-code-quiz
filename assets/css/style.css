@@ -23,7 +23,7 @@ body, h1 {
     align-items: center;
 }
 
-.answer-container {
+.answer-card {
     display: flex;
     flex-direction: initial;
     margin-bottom: 0.5rem;
