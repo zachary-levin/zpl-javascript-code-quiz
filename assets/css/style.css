@@ -47,3 +47,11 @@ body, h1 {
     cursor: pointer;
     box-shadow: 0 0.4rem 1.4rem 0 rgb(87, 158, 184);
 }
+
+.correct {
+    background-color: lightgreen;
+}
+
+.incorrect {
+    background-color: lightpink;
+}

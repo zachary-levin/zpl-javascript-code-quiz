@@ -150,11 +150,15 @@ const getNewQuestion = () => {
             }
 
             clickedAnswer.parentElement.classList.add(classToApply);
+
+            setTimeout(() => {
+                clickedAnswer.parentElement.classList.add(classToApply);
+                getNewQuestion();
+                acceptingAnswers = true;
+            }, 1000);
         });
     });
-
-    //availableQuestions.shift();
-    // getNewQuestion();
+    availableQuestions.shift();
 };
 
 startGame();
