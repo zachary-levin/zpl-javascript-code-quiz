@@ -1,4 +1,3 @@
-
 var questions = [
     // Question 1
     {
@@ -63,14 +62,14 @@ var questions = [
         possibleAnswers: ["for loop", "while", "if else"],
         correctAnswer: "if else"
     }
-]
+];
 
 
 var score = 0;
 var highScore = [];
 
 
-//click a button
+//click a start button
 //show first question
 //click a answer
 //compare what they clicked to the correct answer
