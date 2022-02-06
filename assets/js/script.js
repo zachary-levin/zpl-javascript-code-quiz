@@ -3,13 +3,10 @@ var questions = [
     {
         id: 1,
         question: "What is the file format for JavaScript files?",
-    
-        //MAY HAVE TO CHANGE ANSWERS FROM AN ARRAY TO "a: '.script', b:'.java', c: '.js', and 'd: .javascript'"
         a: ".script",
         b: ".java",
         c: ".js",
         d: ".javascript",
-        //possibleAnswers: [".script", ".java", ".js", ".javascript"],
         answer: "a"
     },
     // Question 2
@@ -33,25 +30,23 @@ var questions = [
         answer: "a"
     },
     // Question 4
-    // ADD REAL QUESTION
     {
         id: 4,
-        question: "What is the third choice in this question?",
-        a: "First choice",
-        b: "Second choice", 
-        c: "Third choice", 
-        d: "Fourth choice",
+        question: "Which statement lets you enter debug mode?",
+        a: "debug;",
+        b: "debug-mode;", 
+        c: "debugger;", 
+        d: "debugger-mode",
         answer: "c"
     },
     // Question 5
-    // ADD REAL QUESTION
     {
         id: 5,
-        question: "What is the fourth choice in this question?",
-        a: "Choice 1",
-        b: "Choice 2",
-        c: "Choice 3",
-        d: "Choice 4",
+        question: "How do you add the equivalent of 'AND' to a loop?",
+        a: "||",
+        b: "and",
+        c: "AND",
+        d: "&&",
         answer: "d"
     },
     // Question 6
@@ -75,14 +70,13 @@ var questions = [
         answer: "b"
     },
     // Question 8
-    // ADD REAL QUESTION
     {
         id: 8,
-        question: "Name a yellow fruit.",
-        a: "Banana", 
-        b: "Apple", 
-        c: "Lime", 
-        d: "Orange",
+        question: "Consider the following code:  let str = ''; 'for (let i = 0; i < 9; i++) {str = str + i;} console.log(str); What should be the expected output? ",
+        a: "123456789", 
+        b: "9", 
+        c: "1", 
+        d: "19",
         answer: "a"
     },
     // Question 9
@@ -107,6 +101,7 @@ var questions = [
     }
     
 ];
+
 
 const question = document.getElementById("question");
 const answers = Array.from(document.getElementsByClassName("answers"));

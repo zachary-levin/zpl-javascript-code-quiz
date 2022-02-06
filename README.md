@@ -1,5 +1,18 @@
 # zpl-javascript-code-quiz-1
 
+## Goal
+The main goal of this project was to create a JavaScript code quiz to gauge my progress with learning JavaScript compared to my peers.
+
+## What I learned
+In this project, I learned how to create arrays within arrays through coding the questions in this project.
+
+## Link to live version
+Check out my code quiz [here](https://zachary-levin.github.io/zpl-javascript-code-quiz-1/)
+
+## Preview
+![Code Screenshot](assets/images/code-quiz-code-screenshot.png)
+![Application Screenshot](assets/images/code-quiz-screenshot.png)
+
 ## User Story
 AS A coding boot camp student
 I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
